@@ -11,7 +11,7 @@ inputIP_2 = int(".".join([*target_host2.split(".")[3:]]))   # IP주소 뒷자리
 ip_addr = ".".join([*target_host2.split(".")[:3]])  # IP주소 뒤 3자리 제외한 주소 
 
 def findPort(a):
-    for port in range(80, 81): # 포트 10000 까지
+    for port in range(0, 100): # 포트 10000 까지
         print(f'{changed_ip} Port {port} Searching...')
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)   # TCP
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # 객체 재사용 허용
